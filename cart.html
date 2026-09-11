@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order & Cart | KITHUL Handcrafted</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">KITHUL<span>.</span></a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="index.html#heritage">Our Heritage</a>
+                <a href="index.html#gallery">Collection</a>
+                <a href="cart.html" class="active">Shop / Order</a>
+                <a href="index.html#contact">Contact Us</a>
+
+            </nav>
+
+           
+
+            <div class="nav-actions">
+                <a href="cart.html" class="cart-btn">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span class="cart-badge" id="cartBadge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Shop & Cart Section -->
+    <section class="shop-section">
+        <div class="container shop-grid">
+            
+            <!-- Left Side: Multiple Size Selection -->
+<div class="product-selection-box">
+    <span class="sub-title">PREMIUM HANDLES</span>
+    <h2>Select Kithul Handles & Quantities</h2>
+    
+    <div class="product-preview-card">
+        <img src="assets/images/3 copy.jpg" alt="Selected Handle" id="productImage">
+        <div class="product-info">
+            <h3>Heritage Grain Curved Handle</h3>
+            <p class="desc">Hand-polished from genuine Sri Lankan Kithul timber with natural dark grain pattern.</p>
+            
+            <!-- Multi Size Selection Table -->
+            <div class="size-selection-table">
+                
+                <!-- 12 Inch Row -->
+                <div class="size-row">
+                    <div class="size-check">
+                        <input type="checkbox" id="check12" class="size-checkbox" data-size="12" data-price="4500">
+                        <label for="check12"><strong>12 Inches</strong><br><small>Rs. 4,500 / item</small></label>
+                    </div>
+                    <div class="quantity-control">
+                        <button type="button" class="qty-btn minus" data-target="qty12">-</button>
+                        <input type="number" id="qty12" value="1" min="1" readonly>
+                        <button type="button" class="qty-btn plus" data-target="qty12">+</button>
+                    </div>
+                </div>
+
+                <!-- 18 Inch Row -->
+                <div class="size-row">
+                    <div class="size-check">
+                        <input type="checkbox" id="check18" class="size-checkbox" data-size="18" data-price="6500">
+                        <label for="check18"><strong>18 Inches</strong><br><small>Rs. 6,500 / item</small></label>
+                    </div>
+                    <div class="quantity-control">
+                        <button type="button" class="qty-btn minus" data-target="qty18">-</button>
+                        <input type="number" id="qty18" value="1" min="1" readonly>
+                        <button type="button" class="qty-btn plus" data-target="qty18">+</button>
+                    </div>
+                </div>
+
+                <!-- 24 Inch Row -->
+                <div class="size-row">
+                    <div class="size-check">
+                        <input type="checkbox" id="check24" class="size-checkbox" data-size="24" data-price="8500">
+                        <label for="check24"><strong>24 Inches</strong><br><small>Rs. 8,500 / item</small></label>
+                    </div>
+                    <div class="quantity-control">
+                        <button type="button" class="qty-btn minus" data-target="qty24">-</button>
+                        <input type="number" id="qty24" value="1" min="1" readonly>
+                        <button type="button" class="qty-btn plus" data-target="qty24">+</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <button id="addToCartBtn" class="btn btn-gold full-width">
+                <i class="fa-solid fa-cart-plus"></i> Add Selected Sizes To Cart
+            </button>
+        </div>
+    </div>
+</div>
+
+            <!-- Right Side: Order Summary & Delivery Cost -->
+            <div class="cart-summary-box">
+                <h3><i class="fa-solid fa-receipt"></i> Order Summary</h3>
+                
+                <div class="cart-items-list" id="cartItemsList">
+                    <p class="empty-msg">No items added yet. Choose size and click Add To Selection.</p>
+                </div>
+
+                <hr class="divider">
+
+                <div class="summary-line">
+                    <span>Subtotal:</span>
+                    <span id="subTotalTxt">Rs. 0</span>
+                </div>
+
+                <div class="summary-line">
+                    <span>Islandwide Delivery:</span>
+                    <span id="deliveryTxt">Rs. 400</span>
+                </div>
+
+                <div class="summary-line total-line">
+                    <span>Total Amount:</span>
+                    <span id="totalTxt">Rs. 400</span>
+                </div>
+
+                <!-- Customer Details for Delivery -->
+                <div class="checkout-inputs">
+                    <h4>Delivery Details</h4>
+                    <input type="text" id="custName" placeholder="Your Full Name">
+                    <input type="text" id="custPhone" placeholder="Phone Number (WhatsApp)">
+                    <textarea id="custAddress" placeholder="Delivery Address"></textarea>
+                </div>
+
+                <button id="sendWhatsappBtn" class="btn btn-whatsapp full-width">
+                    <i class="fa-brands fa-whatsapp"></i> Send Order via WhatsApp
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
